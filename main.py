@@ -11,14 +11,14 @@ st.markdown("""
     <style>
     /* Fundo da página */
     .stApp {
-        background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
-        color: black; /* Fonte preta */
+        background: linear-gradient(135deg, #c1cfde, #5e7485);
+        color: black;
         font-family: 'Segoe UI', sans-serif;
     }
 
     /* Cabeçalhos */
     h1, h2, h3 {
-        color: #0a66c2;
+        color: #464f5c;
         font-weight: 600;
     }
 
@@ -27,32 +27,14 @@ st.markdown("""
         background-color: #464f5c !important;
     }
     section[data-testid="stSidebar"] * {
-        color: black !important;
-    }
-
-    /* Botões customizados */
-    .custom-button {
-        background-color: #0a66c2;
-        color: black;
-        padding: 8px 16px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: 500;
-        display: inline-block;
-        margin: 5px 0;
-        transition: all 0.3s ease;
-        text-decoration: none;
-    }
-    .custom-button:hover {
-        background-color: #004182;
-        transform: scale(1.05);
+        color: white !important;
     }
 
     /* Lista */
     ul {
         list-style-type: "✅ ";
         padding-left: 1.2rem;
-        color: black; /* Fonte preta também nas listas */
+        color: white; /* Fonte preta também nas listas */
     }
     </style>
 """, unsafe_allow_html=True)
@@ -82,16 +64,20 @@ section = st.sidebar.radio("", [t["about_me"], t["projects"], t["contact"]])
 
 if section == t["about_me"]:
     st.header(t["about_me"])
-    st.write("Tive experiência com SQL, criando views, realizando queries em banco de dados relacionais, MariaDB e MSSQL."
-    " Atuei na criação de Dashboards voltados para o setor comercial, apresentando KPIs e analises objetivando melhorar o desempenho"
+    st.write("Tenho experiência com SQL, criando views, realizando queries em banco de dados relacionais, MariaDB e MSSQL."
+    " Atuei na criação de Dashboards no PowerBI voltados para o setor comercial, apresentando KPIs e analises objetivando melhorar o desempenho"
     "da equipe de vendas."
-    " Desenvolvi Pipelines de extração de dados em Python, afim de automatizar e facilitar a coleta e ingestão de dados para analises posteriores."
+    " Desenvolvi Pipelines de extração de dados em Python, afim de automatizar e facilitar a coleta e ingestão de dados para análises posteriores." \
+    " Desenvolvi web apps para exibição de dados em tempo real e paineis interativos em Streamlit, fornecendo uma visão rápida das ações diarias das vendas" \
+    "Permitindo maior rapidez para a tomada de decisão."
     )
 
 elif section == t["projects"]:
     st.header(t["projects"])
     st.text("Dashboard de Faturamento")
-    st.text("Análise de faturamento: ")
+    st.text("Análise de faturamento, criada com dados ficticios. A analise parte de arquivos em xlsx, onde os dados foram tratados, tabelas de faturamento foram unidas" \
+    "tabelas fato e dimensão foram relacionadas e as medidas criadas, asssim como as diversas formatações visuais." \
+    "Esta análise contempla: ")
     st.markdown(
         """
         - Por Período  
