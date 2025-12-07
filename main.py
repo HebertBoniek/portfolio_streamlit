@@ -6,6 +6,9 @@ st.set_page_config(page_title="Currículo - Hebert Boniek", layout='centered')
 dash_faturamento = open("dash_faturamento.mkv", "rb")
 dash_faturamento_vd = dash_faturamento.read()
 
+dash_sac = open("dash_sac.mkv", "rb")
+dash_sac_vd = dash_sac.read()
+
 # CSS 
 st.markdown("""
     <style>
@@ -87,6 +90,12 @@ elif section == t["projects"]:
         """
     )
     st.video(dash_faturamento_vd)
+
+    st.text("Dashboard Performance SAC")
+    st.text("Análise de performance do , criada com dados ficticios. A analise parte de arquivos em csv, onde os dados foram tratados, relacionado a tabela de tickets com as dimensões como clientes, categoria
+    de incidentes e calendario." \
+    "As medidas foram criadas, asssim como as formatações visuais dos gráficos permitindo visualização clara do realizado no filtrado com o ano anterior.")
+    st.video(dash_sac_vd)
 
 elif section == t["contact"]:
     st.header(t["contact"])
