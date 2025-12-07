@@ -92,10 +92,15 @@ elif section == t["projects"]:
     st.video(dash_faturamento_vd)
 
     st.text("Dashboard Performance SAC")
-    st.text("Análise de performance do , criada com dados ficticios. A analise parte de arquivos em csv, onde os dados foram tratados, relacionado a tabela de tickets com as dimensões como clientes, categoria" \
-    de incidentes e calendario." \
-    "As medidas foram criadas, asssim como as formatações visuais dos gráficos permitindo visualização clara do realizado no filtrado com o ano anterior.")
+    st.text(
+    "Análise de performance do SAC, criada com dados fictícios. "
+    "A análise parte de arquivos em CSV, onde os dados foram tratados, "
+    "relacionando a tabela de tickets com dimensões como clientes, categoria "
+    "de incidentes e calendário. "
+    "As medidas foram criadas, assim como as formatações visuais dos gráficos, "
+    "permitindo visualização clara do realizado no filtrado com o ano anterior.")
     st.video(dash_sac_vd)
+
 
 elif section == t["contact"]:
     st.header(t["contact"])
